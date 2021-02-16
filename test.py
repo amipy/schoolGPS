@@ -14,19 +14,13 @@ def getDirection(last, current, target):
     tgty = tgty - lsty
     curx = curx - lstx
     cury = cury - lsty
-    lstx=0
-    lsty=0
-    invert_direction=False
-
-    if curx<0:
-        curx=-curx
-        invert_direction= not invert_direction
-    if cury>0:
-        cury=-cury
-        invert_direction = not invert_direction
-
-    normaly=(tgty/tgtx)*curx
-    if cury<normaly:
+    lstx = 0
+    lsty = 0
+    invert_direction = False
+    if curx < 0:
+        invert_direction = True
+    normaly = (tgty/tgtx)*curx
+    if cury < normaly:
         if invert_direction:
             return "Left"
         return "Right"
