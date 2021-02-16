@@ -118,10 +118,12 @@ g.add_weighted_edges_from(edges)
 nx.draw(g, with_labels=True)
 path = nx.shortest_path(g, orig_node, dest_node)
 print(path)
-front = first_floor_coords[path[0]]
-middle = first_floor_coords[path[1]]
+last = first_floor_coords[path[0]]
+current = first_floor_coords[path[1]]
 old_angle = 0
 del path[:2]
 print("Follow arrows")
 for i in path:
-    pass
+    print(getDirection(last,current,first_floor_coords[i]), i)
+    last=current
+    current=first_floor_coords[i]
