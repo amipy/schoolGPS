@@ -24,26 +24,44 @@ def getDirection(last, current, target):
         return "Left"
     return "Right"
 
-last = (0, 0)
-current = (6, 0)
-target = (7, 1)
+last = (607, 355)
+current = (553, 355)
+target = (553, 455)
 
 assert(getDirection(last, current, target) == "Left")
 
-last = (0, 4)
-current = (6, 4)
-target = (9, 2)
+last = (553, 355)
+current = (553, 455)
+target = (503, 455)
 
 assert(getDirection(last, current, target) == "Right")
 
-last = (9, 0)
-current = (6, 0)
-target = (4, 1)
+last = (553, 455)
+current = (503, 455)
+target = (449, 440)
 
 assert(getDirection(last, current, target) == "Right")
 
-last = (9, 9)
-current = (6, 8)
-target = (4, 1)
+last = (503, 455)
+current = (449, 440)
+target = (449, 411)
+
+assert (getDirection(last, current, target) == "Left")
+
+last = (449, 440)
+current = (449, 411)
+target = (416, 232)
+
+assert (getDirection(last, current, target) == "Left")
+
+last = (449, 411)
+current = (449, 440)
+target = (347, 223)
+
+assert (getDirection(last, current, target) == "Left")
+
+last = (449, 440)
+current = (347, 223)
+target = (227, 469)
 
 assert (getDirection(last, current, target) == "Left")
